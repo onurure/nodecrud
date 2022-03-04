@@ -4,7 +4,9 @@
   "description": "deneme blogu",
   "main": "app.js",
   "scripts": {
-    "devserver": "./node_modules/nodemon/bin/nodemon.js index.js"
+    "devserver": "./node_modules/nodemon/bin/nodemon.js index.js",
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda serve src"
   },
   "dependencies": {
     "body-parser": "^1.19.2",
@@ -13,6 +15,8 @@
     "mongoose": "^6.2.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "netlify-lambda": "^2.0.15",
+    "nodemon": "^2.0.15",
+    "serverless-http": "^2.7.0"
   }
 }
