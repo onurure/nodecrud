@@ -18,7 +18,6 @@ mongoose.connect(process.env.MONGO, {useNewUrlParser:true}).then(() => console.l
 
 app.use('/.netlify/functions/api', postsRoute)
 
-module.exports = app;
 module.exports.handler = serverless(app)
 // app.listen(3000, () => {
 //   console.log('listen')
